@@ -5811,7 +5811,7 @@ tw-link:hover {
     “……事实也如其所愿，她成功了。”
 
     &lt;!-- 1. 数值判定 --&gt;
-    (if: $physStr + $knowStr = 10)[
+    (if: $physStr + $knowStr is 10)[
       &lt;hr class=&quot;simple-divider-blue&quot;&gt;
       &lt;div class=&quot;choice-container&quot;&gt;
         (link-goto: &quot;▶ 继续&quot;, &quot;成神线1&quot;)
@@ -5956,9 +5956,9 @@ tw-link:hover {
     台阶从你脚边延伸上去，通向深处。&lt;br&gt;
     深处悬着一颗紫色的心脏。&lt;br&gt;&lt;br&gt;
     你转身，走出去。&lt;br&gt;&lt;br&gt;
-    索拉恩站在外面。&lt;br&gt;&lt;br&gt;
+    索拉恩站在外面。&lt;br&gt;
     不再是半透明的灵魂，不再是灵力轮廓——&lt;br&gt;&lt;br&gt;
-    he 变成了一个活着的人。面具还戴在脸上，但露出的那半截脸有了血色，手指也不再是半透明的灰。他低头看了看自己的手，又抬起头，望向你。
+    他变成了一个活着的人。面具还戴在脸上，但露出的那半截脸有了血色，手指也不再是半透明的灰。他低头看了看自己的手，又抬起头，望向你。
   &lt;/div&gt;
 
   &lt;hr class=&quot;simple-divider-blue&quot;&gt;
@@ -6602,7 +6602,7 @@ strong {
     “……事实也如其所愿，她成功了。”
 
     &lt;!-- 1. 数值判定 --&gt;
-    (if: $mindStr + $resoStr = 10)[
+    (if: $mindStr + $resoStr is 10)[
       &lt;hr class=&quot;simple-divider-blue&quot;&gt;
       &lt;div class=&quot;choice-container&quot;&gt;
         (link-goto: &quot;▶ 继续&quot;, &quot;成神线1&quot;)
@@ -11316,7 +11316,7 @@ tw-link:hover {
   &lt;hr class=&quot;simple-divider-blue&quot;&gt;
 
   &lt;div class=&quot;choice-container&quot;&gt;
-     [[▶ 你为什么这么快突破了位面的限制？-&gt;死神线3-2]]
+     [[▶ 你为什么这么快突破了位面的限制？-&gt;死神线3-2]]&lt;br&gt;
      [[▶ 为什么我可以和你对话？-&gt;死神线3-1]]
   &lt;/div&gt;
 
@@ -11952,7 +11952,7 @@ tw-link {
 tw-link:hover {
     opacity: 0.5;
 }
-&lt;/style&gt;</tw-passagedata><tw-passagedata pid="163" name="赛伦斯3" tags="" position="3300,2525" size="100,100">&lt;!-- 核心修正：初始化变量 --&gt;
+&lt;/style&gt;</tw-passagedata><tw-passagedata pid="163" name="赛伦斯3" tags="" position="3300,2525" size="100,100">&lt;!-- 核心修正：恢复回安全、纯粹的 Harlowe 语法判定 --&gt;
 (if: $step is 0)[(set: $step to 1)]
 (enchant: ?page, (text-colour: #eeedd7) + (bg: #3f4f5a))
 
@@ -11972,11 +11972,12 @@ tw-link:hover {
       
       (if: $step is 2)[ [[▶ 你在回响纪做了什么？-&gt;赛2]] ]
       
-      (if: $step is 3)[ [[▶ 你在噪响纪做了什么？-&gt;赛3]] ]
+      (if: $step is 3)[ [[▶ 你在噪响纪做了清什么？-&gt;赛3]] ]
       
       (if: $step is 4)[ [[▶ 你怎么看待第一公社？-&gt;赛4]]  ]
       
       (if: $step is 5)[ [[▶ 为什么要带来终结？-&gt;赛伦斯4]] ]
+    &lt;/div&gt; &lt;!-- 补全了之前漏掉的 questions-group 闭合标签，选项现在可以正常渲染了 --&gt;
   &lt;/div&gt;
 &lt;/div&gt;
 }
