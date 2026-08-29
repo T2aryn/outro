@@ -2505,7 +2505,7 @@ tw-link:hover {
     color: #3f4f5a !important;
 }
 &lt;/style&gt;</tw-passagedata><tw-passagedata pid="32" name="赛琳" tags="" position="1425,2150" size="100,100">&lt;!-- 核心修正：如果变量不存在，则设为 1 --&gt;
-(if: $step is 0)[(set: $step to 1)]
+(if: $step1 is 0)[(set: $step1 to 1)]
 
 (enchant: ?page, (text-colour: #3c3c6d) + (bg: #dee0d7))
 
@@ -2524,24 +2524,24 @@ tw-link:hover {
   &lt;div class=&quot;choice-container&quot;&gt;
     &lt;div class=&quot;questions-group&quot;&gt;
       &lt;!-- 初始显示 --&gt;
-      (if: $step &gt;= 1)[ [[▶ 呼唤她的名字-&gt;琳1]] ]
+      (if: $step1 &gt;= 1)[ [[▶ 呼唤她的名字-&gt;琳1]] ]
       
       &lt;!-- 只有去过羊1，变量被设为 2 后才显示 --&gt;
-      (if: $step &gt;= 2)[ &lt;br&gt;[[▶ 你为什么会在这里？-&gt;琳2]] ]
+      (if: $step1 &gt;= 2)[ &lt;br&gt;[[▶ 你为什么会在这里？-&gt;琳2]] ]
       
       &lt;!-- 只有去过羊2，变量被设为 3 后才显示 --&gt;
-      (if: $step &gt;= 3)[ &lt;br&gt;[[▶ 为什么会发生第二次灾厄？-&gt;琳3]] ]
+      (if: $step1 &gt;= 3)[ &lt;br&gt;[[▶ 为什么会发生第二次灾厄？-&gt;琳3]] ]
       
       &lt;!-- 只有去过羊3，变量被设为 4 后才显示 --&gt;
-      (if: $step &gt;= 4)[ &lt;br&gt;[[▶ 古树是如何消失的？-&gt;琳4]] ]
+      (if: $step1 &gt;= 4)[ &lt;br&gt;[[▶ 古树是如何消失的？-&gt;琳4]] ]
     &lt;/div&gt;
     
       &lt;!-- 只有去过羊4，变量被设为 4 后才显示 --&gt;
-      (if: $step &gt;= 5)[ &lt;br&gt;[[▶ 索拉恩？-&gt;琳5]] ]
+      (if: $step1 &gt;= 5)[ &lt;br&gt;[[▶ 索拉恩？-&gt;琳5]] ]
     &lt;/div&gt;
     
     &lt;!-- 只有去过羊5，问完所有问题后才显示 --&gt;
-    (if: $step &gt;= 6)[
+    (if: $step1 &gt;= 6)[
     &lt;div class=&quot;action-group&quot;&gt;
       &lt;hr class=&quot;simple-divider-blue&quot;&gt;
       [[▶ 摇铃应该怎么使用？-&gt;赛琳2]]
@@ -2560,7 +2560,7 @@ tw-link:hover {
 .simple-divider-blue { border: 0; border-top: 1px solid rgba(60, 60, 109, 0.2); width: 60px; margin: 30px auto; }
 tw-link { text-decoration: none !important; font-weight: bold; color: #3c3c6d !important; font-size: 16px; }
 tw-link:hover { opacity: 0.7; }
-&lt;/style&gt;</tw-passagedata><tw-passagedata pid="33" name="琳1" tags="" position="1275,2000" size="100,100">(if: $step is 1)[(set: $step to 2)]
+&lt;/style&gt;</tw-passagedata><tw-passagedata pid="33" name="琳1" tags="" position="1275,2000" size="100,100">(if: $step1 is 1)[(set: $step1 to 2)]
 (enchant: ?page, (text-colour: #3c3c6d) + (bg: #dee0d7))
 {
 &lt;div class=&quot;story-wrapper&quot;&gt;
@@ -2637,7 +2637,7 @@ tw-link {
 tw-link:hover {
     opacity: 0.7;
 }
-&lt;/style&gt;</tw-passagedata><tw-passagedata pid="34" name="琳2" tags="" position="1175,2100" size="100,100">(if: $step is 2)[(set: $step to 3)]
+&lt;/style&gt;</tw-passagedata><tw-passagedata pid="34" name="琳2" tags="" position="1175,2100" size="100,100">(if: $step1 is 2)[(set: $step1 to 3)]
 (enchant: ?page, (text-colour: #3c3c6d) + (bg: #dee0d7))
 {
 &lt;div class=&quot;story-wrapper&quot;&gt;
@@ -2709,7 +2709,7 @@ tw-link {
 tw-link:hover {
     opacity: 0.7;
 }
-&lt;/style&gt;</tw-passagedata><tw-passagedata pid="35" name="琳3" tags="" position="1275,2200" size="100,100">(if: $step is 3)[(set: $step to 4)]
+&lt;/style&gt;</tw-passagedata><tw-passagedata pid="35" name="琳3" tags="" position="1275,2200" size="100,100">(if: $step1 is 3)[(set: $step1 to 4)]
 (enchant: ?page, (text-colour: #3c3c6d) + (bg: #dee0d7))
 {
 &lt;div class=&quot;story-wrapper&quot;&gt;
@@ -2783,7 +2783,7 @@ tw-link {
 tw-link:hover {
     opacity: 0.7;
 }
-&lt;/style&gt;</tw-passagedata><tw-passagedata pid="36" name="琳4" tags="" position="1600,2025" size="100,100">(if: $step is 4)[(set: $step to 5)]
+&lt;/style&gt;</tw-passagedata><tw-passagedata pid="36" name="琳4" tags="" position="1600,2025" size="100,100">(if: $step1 is 4)[(set: $step1 to 5)]
 (enchant: ?page, (text-colour: #3c3c6d) + (bg: #dee0d7))
 {
 &lt;div class=&quot;story-wrapper&quot;&gt;
@@ -2856,7 +2856,7 @@ tw-link {
 tw-link:hover {
     opacity: 0.7;
 }
-&lt;/style&gt;</tw-passagedata><tw-passagedata pid="37" name="琳5" tags="" position="1600,2150" size="100,100">(if: $step is 5)[(set: $step to 6)]
+&lt;/style&gt;</tw-passagedata><tw-passagedata pid="37" name="琳5" tags="" position="1600,2150" size="100,100">(if: $step1 is 5)[(set: $step1 to 6)]
 (enchant: ?page, (text-colour: #3c3c6d) + (bg: #dee0d7))
 {
 &lt;div class=&quot;story-wrapper&quot;&gt;
@@ -3914,7 +3914,7 @@ tw-link:hover {
     opacity: 0.5;
 }
 &lt;/style&gt;</tw-passagedata><tw-passagedata pid="53" name="索拉恩" tags="" position="2175,1775" size="100,100">&lt;!-- 核心修正：初始化变量 --&gt;
-(if: $step is 0)[(set: $step to 1)]
+(if: $step2 is 0)[(set: $step2 to 1)]
 
 (enchant: ?page, (text-colour: #3c3c6d) + (bg: #dee0d7))
 
@@ -3936,19 +3936,19 @@ tw-link:hover {
     &lt;div class=&quot;questions-group&quot;&gt;
       &lt;!-- 使用 is 判定：确保当前步数仅显示对应的一个选项 --&gt;
       
-      (if: $step is 1)[ (link-goto: &quot;▶ 你是索拉恩？&quot;, &quot;索1&quot;) ] 
+      (if: $step2 is 1)[ (link-goto: &quot;▶ 你是索拉恩？&quot;, &quot;索1&quot;) ] 
       
-      (if: $step is 2)[ (link-goto: &quot;▶ 是你在引导这一切吗？&quot;, &quot;索2&quot;) ]
+      (if: $step2 is 2)[ (link-goto: &quot;▶ 是你在引导这一切吗？&quot;, &quot;索2&quot;) ]
       
-      (if: $step is 3)[ (link-goto: &quot;▶ 告诉他赛琳的事&quot;, &quot;索3&quot;) ]
+      (if: $step2 is 3)[ (link-goto: &quot;▶ 告诉他赛琳的事&quot;, &quot;索3&quot;) ]
       
-      (if: $step is 4)[ (link-goto: &quot;▶ 古树是如何消失的？&quot;, &quot;索4&quot;) ]
+      (if: $step2 is 4)[ (link-goto: &quot;▶ 古树是如何消失的？&quot;, &quot;索4&quot;) ]
       
-      (if: $step is 5)[ (link-goto: &quot;▶ 什么事？&quot;, &quot;索5&quot;) ]
+      (if: $step2 is 5)[ (link-goto: &quot;▶ 什么事？&quot;, &quot;索5&quot;) ]
     &lt;/div&gt;
     
     &lt;!-- 问完所有问题后显示最终选项 --&gt;
-    (if: $step &gt;= 6)[
+    (if: $step2 &gt;= 6)[
     &lt;div class=&quot;action-group&quot;&gt;
       &lt;hr class=&quot;simple-divider-blue&quot;&gt;
       [[▶ 查看他身后的门-&gt;开门分支]]
@@ -3967,7 +3967,7 @@ tw-link:hover {
 .simple-divider-blue { border: 0; border-top: 1px solid rgba(60, 60, 109, 0.2); width: 60px; margin: 30px auto; }
 tw-link { text-decoration: none !important; font-weight: bold; color: #3c3c6d !important; font-size: 16px; }
 tw-link:hover { opacity: 0.7; }
-&lt;/style&gt;</tw-passagedata><tw-passagedata pid="54" name="索1" tags="" position="1900,1650" size="100,100">(if: $step is 1)[(set: $step to 2)]
+&lt;/style&gt;</tw-passagedata><tw-passagedata pid="54" name="索1" tags="" position="1900,1650" size="100,100">(if: $step2 is 1)[(set: $step2 to 2)]
 (enchant: ?page, (text-colour: #3c3c6d) + (bg: #dee0d7))
 {
 &lt;div class=&quot;story-wrapper&quot;&gt;
@@ -4041,7 +4041,7 @@ tw-link {
 tw-link:hover {
     opacity: 0.7;
 }
-&lt;/style&gt;</tw-passagedata><tw-passagedata pid="55" name="索2" tags="" position="2325,1650" size="100,100">(if: $step is 2)[(set: $step to 3)]
+&lt;/style&gt;</tw-passagedata><tw-passagedata pid="55" name="索2" tags="" position="2325,1650" size="100,100">(if: $step2 is 2)[(set: $step2 to 3)]
 (enchant: ?page, (text-colour: #3c3c6d) + (bg: #dee0d7))
 {
 &lt;div class=&quot;story-wrapper&quot;&gt;
@@ -4115,7 +4115,7 @@ tw-link {
 tw-link:hover {
     opacity: 0.7;
 }
-&lt;/style&gt;</tw-passagedata><tw-passagedata pid="56" name="索3" tags="" position="2025,1775" size="100,100">(if: $step is 3)[(set: $step to 4)]
+&lt;/style&gt;</tw-passagedata><tw-passagedata pid="56" name="索3" tags="" position="2025,1775" size="100,100">(if: $step2 is 3)[(set: $step2 to 4)]
 (enchant: ?page, (text-colour: #3c3c6d) + (bg: #dee0d7))
 {
 &lt;div class=&quot;story-wrapper&quot;&gt;
@@ -4798,7 +4798,7 @@ tw-link {
 tw-link:hover {
     opacity: 0.5;
 }
-&lt;/style&gt;</tw-passagedata><tw-passagedata pid="65" name="索4" tags="" position="2325,1900" size="100,100">(if: $step is 4)[(set: $step to 5)]
+&lt;/style&gt;</tw-passagedata><tw-passagedata pid="65" name="索4" tags="" position="2325,1900" size="100,100">(if: $step2 is 4)[(set: $step2 to 5)]
 (enchant: ?page, (text-colour: #3c3c6d) + (bg: #dee0d7))
 {
 &lt;div class=&quot;story-wrapper&quot;&gt;
@@ -4873,7 +4873,7 @@ tw-link {
 tw-link:hover {
     opacity: 0.7;
 }
-&lt;/style&gt;</tw-passagedata><tw-passagedata pid="66" name="索5" tags="" position="2025,1900" size="100,100">(if: $step is 5)[(set: $step to 6)]
+&lt;/style&gt;</tw-passagedata><tw-passagedata pid="66" name="索5" tags="" position="2025,1900" size="100,100">(if: $step2 is 5)[(set: $step2 to 6)]
 (enchant: ?page, (text-colour: #3c3c6d) + (bg: #dee0d7))
 {
 &lt;div class=&quot;story-wrapper&quot;&gt;
@@ -11951,11 +11951,8 @@ tw-link {
 tw-link:hover {
     opacity: 0.5;
 }
-&lt;/style&gt;</tw-passagedata><tw-passagedata pid="163" name="赛伦斯3" tags="" position="3300,2525" size="100,100">&lt;!-- 核心修正：恢复回安全、纯粹的 Harlowe 语法判定 --&gt;
-(if: $step is 0)[(set: $step to 1)]
-
+&lt;/style&gt;</tw-passagedata><tw-passagedata pid="163" name="赛伦斯3" tags="" position="3300,2525" size="100,100">(if: $step3 is 0)[(set: $step3 to 1)]
 (enchant: ?page, (text-colour: #eeedd7) + (bg: #3f4f5a))
-
 {
 &lt;div class=&quot;story-wrapper&quot;&gt;
   &lt;div class=&quot;dialogue-box&quot;&gt;
@@ -11966,17 +11963,16 @@ tw-link:hover {
 
   &lt;div class=&quot;choice-container&quot;&gt;
     &lt;div class=&quot;questions-group&quot;&gt;
-      &lt;!-- 使用 is 判定：确保当前步数仅显示对应的一个选项 --&gt;
       
-      (if: $step is 1)[ [[▶ 你与索拉恩的关系是？-&gt;赛1]] ] 
+      (if: $step3 is 1)[ [[▶ 你与索拉恩的关系是？-&gt;赛1]] ] 
       
-      (if: $step is 2)[ [[▶ 你在回响纪做了什么？-&gt;赛2]] ]
+      (if: $step3 is 2)[ [[▶ 你在回响纪做了什么？-&gt;赛2]] ]
       
-      (if: $step is 3)[ [[▶ 你在噪响纪做了什么？-&gt;赛3]] ]
+      (if: $step3 is 3)[ [[▶ 你在噪响纪做了什么？-&gt;赛3]] ]
       
-      (if: $step is 4)[ [[▶ 你怎么看待第一公社？-&gt;赛4]]  ]
+      (if: $step3 is 4)[ [[▶ 你怎么看待第一公社？-&gt;赛4]]  ]
       
-      (if: $step is 5)[ [[▶ 为什么要带来终结？-&gt;赛伦斯4]] ]
+      (if: $step3 is 5)[ [[▶ 为什么要带来终结？-&gt;赛伦斯4]] ]
     &lt;/div&gt; &lt;!-- 补全了之前漏掉的 questions-group 闭合标签，选项现在可以正常渲染了 --&gt;
   &lt;/div&gt;
 &lt;/div&gt;
@@ -11995,7 +11991,7 @@ tw-link:hover {
 /* 修正：按键颜色修改为 #eeedd7，防止在深色背景下隐形 */
 tw-link { text-decoration: none !important; font-weight: bold; color: #eeedd7 !important; font-size: 16px; cursor: pointer; }
 tw-link:hover { opacity: 0.7; }
-&lt;/style&gt;</tw-passagedata><tw-passagedata pid="164" name="赛1" tags="" position="3175,2450" size="100,100">(if: $step is 1)[(set: $step to 2)]
+&lt;/style&gt;</tw-passagedata><tw-passagedata pid="164" name="赛1" tags="" position="3175,2450" size="100,100">(if: $step3 is 1)[(set: $step3 to 2)]
 (enchant: ?page, (text-colour: #eeedd7) + (bg: #3f4f5a))
 {
 &lt;div class=&quot;story-wrapper&quot;&gt;
@@ -12056,7 +12052,7 @@ tw-link {
 tw-link:hover {
     opacity: 0.5;
 }
-&lt;/style&gt;</tw-passagedata><tw-passagedata pid="165" name="赛2" tags="" position="3175,2575" size="100,100">(if: $step is 2)[(set: $step to 3)]
+&lt;/style&gt;</tw-passagedata><tw-passagedata pid="165" name="赛2" tags="" position="3175,2575" size="100,100">(if: $step3 is 2)[(set: $step3 to 3)]
 (enchant: ?page, (text-colour: #eeedd7) + (bg: #3f4f5a))
 {
 &lt;div class=&quot;story-wrapper&quot;&gt;
@@ -12116,7 +12112,7 @@ tw-link {
 tw-link:hover {
     opacity: 0.5;
 }
-&lt;/style&gt;</tw-passagedata><tw-passagedata pid="166" name="赛3" tags="" position="3425,2450" size="100,100">(if: $step is 3)[(set: $step to 4)]
+&lt;/style&gt;</tw-passagedata><tw-passagedata pid="166" name="赛3" tags="" position="3425,2450" size="100,100">(if: $step3 is 3)[(set: $step3 to 4)]
 (enchant: ?page, (text-colour: #eeedd7) + (bg: #3f4f5a))
 {
 &lt;div class=&quot;story-wrapper&quot;&gt;
@@ -12176,7 +12172,7 @@ tw-link {
 tw-link:hover {
     opacity: 0.5;
 }
-&lt;/style&gt;</tw-passagedata><tw-passagedata pid="167" name="赛4" tags="" position="3425,2575" size="100,100">(if: $step is 4)[(set: $step to 5)]
+&lt;/style&gt;</tw-passagedata><tw-passagedata pid="167" name="赛4" tags="" position="3425,2575" size="100,100">(if: $step3 is 4)[(set: $step3 to 5)]
 (enchant: ?page, (text-colour: #eeedd7) + (bg: #3f4f5a))
 {
 &lt;div class=&quot;story-wrapper&quot;&gt;
