@@ -6413,8 +6413,7 @@ tw-link:hover {
     ]
 
     &lt;!-- 2. Weak 成功分支 --&gt;
-    (if: $Weak is &quot;success&quot;)[
-      &lt;!-- 将原伪代码 IF / 或者 改写为 Harlowe 的 or 语法 --&gt;
+    (else-if: $Weak is &quot;success&quot;)[
       (if: $Urge is &quot;success&quot; or $Fear is &quot;success&quot;)[
         你能看出来他的情绪正在经历剧烈的动荡，眼里闪烁着动摇，但最终他垂下目光，只留下一句：“……我不想说。”
         
